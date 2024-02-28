@@ -1,30 +1,15 @@
-// App.tsx
-
 import { Grid, GridItem, Show } from '@chakra-ui/react';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Navbar from './components/Navbar';
 import SearchForm from './components/SearchForm';
 import WeatherData from './components/WeatherData';
-import weatherService from './services/api-url';
+import useWeatherData from './hooks/weather-data';
 
 function App() {
   const [city, setCity] = useState<string>('');
-  const [weatherData, setWeatherData] = useState<any>(null);
 
-  useEffect(() => {
-    const fetchWeatherData = async () => {
-      if (city.trim() === '') return; // Skip if city is empty
-      try {
-        const response = await weatherService.get(`?q=${city}`);
-        setWeatherData(response.data);
-      } catch (error) {
-        console.error('Error fetching weather data:', error);
-        setWeatherData(null); // Reset weatherData state to indicate error
-      }
-    };
 
-    fetchWeatherData();
-  }, [city]);
+  const weatherData = useWeatherData(city)
 
   const handleFormSubmit = (data: { weather: string }) => {
     setCity(data.weather);
