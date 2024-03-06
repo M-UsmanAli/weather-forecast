@@ -1,4 +1,4 @@
-import { HStack, Heading, Image, Text } from "@chakra-ui/react"
+import { HStack, Image } from "@chakra-ui/react"
 import logo from '../../public/logo.png'
 import ColorModeSwitch from "./ColorModeSwitch"
 const Navbar = () => {
