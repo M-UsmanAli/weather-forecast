@@ -20,10 +20,10 @@ const SearchForm = ({ onSubmit }: Props) => {
         <div>
             <HStack>
             <form onSubmit={handleSubmit((data) => { onSubmit(data), reset() })}>
-                <Text>City Name:</Text>
+                <Text fontSize='2xl' fontWeight='bold'>City Name:</Text>
                 <Input {...register('weather')} id="weather" type="text" className="form-control" paddingY={1} />
                 {errors.weather && <p className="text-danger">{errors.weather.message}</p>}
-                <Button colorScheme="green" type="submit" className="paddingY=2px">
+                <Button colorScheme="green" type="submit" marginTop={2}>
                     Submit
                 </Button>
             </form>

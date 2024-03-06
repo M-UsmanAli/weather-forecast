@@ -19,18 +19,18 @@ function App() {
     <div className='app-container'>
       <Grid
         templateAreas={{
-          base: `"nav" "aside main"`,
+          base: `"nav" "aside" "main"`,
           lg: `"nav nav" "aside main"`,
         }}
       >
         <GridItem area="nav">
           <Navbar />
         </GridItem>
-        <Show above="lg">
-          <GridItem area="aside" paddingX={5}>
-            <SearchForm onSubmit={handleFormSubmit} />
-          </GridItem>
-        </Show>
+
+        <GridItem area="aside" paddingX={5}>
+          <SearchForm onSubmit={handleFormSubmit} />
+        </GridItem>
+
         <GridItem area="main">
           <WeatherData weatherData={weatherData} />
         </GridItem>

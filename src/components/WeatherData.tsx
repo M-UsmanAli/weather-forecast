@@ -23,36 +23,36 @@ const WeatherData: React.FC<WeatherDataProps> = ({ weatherData }) => {
         <div>
             <SimpleGrid columns={{ sm: 1, md: 2, lg: 3, xl: 3 }} spacing={4} padding='10px'>
                 <Box backgroundColor="rgba(255, 255, 255, 0.5)" padding='20px' borderRadius='10px'>
-                    <Text fontSize='2xl'>City:</Text>
-                    <Text fontSize='2xl'>{weatherData.name}</Text>
+                    <Text fontSize='4xl' fontWeight='bold'>City:</Text>
+                    <Text fontSize='2xl' >{weatherData.name}</Text>
                 </Box>
                 <Box backgroundColor="rgba(255, 255, 255, 0.5)" padding='20px' borderRadius='10px'>
-                    <Text fontSize='2xl'>Temperature:</Text>
+                    <Text fontSize='4xl' fontWeight='bold'>Temperature:</Text>
                     <Text fontSize='2xl'>{temperatureCelsius}°C</Text>
                 </Box>
                 <Box backgroundColor="rgba(255, 255, 255, 0.5)" padding='20px' borderRadius='10px'>
-                    <Text fontSize='2xl'>Wind Speed: </Text>
+                    <Text fontSize='4xl' fontWeight='bold'>Wind Speed: </Text>
                     <Text fontSize='2xl'>{windSpeed} m/s</Text>
                 </Box>
                 <Box backgroundColor="rgba(255, 255, 255, 0.5)" padding='20px' borderRadius='10px'>
-                    <Text fontSize='2xl'>Humidity:</Text>
+                    <Text fontSize='4xl' fontWeight='bold'>Humidity:</Text>
                     <Text fontSize='2xl'>{humidity}%</Text>
                 </Box>
                 <Box backgroundColor="rgba(255, 255, 255, 0.5)" padding='20px' borderRadius='10px'>
-                    <Text fontSize='2xl'>Weather Condition:</Text>
+                    <Text fontSize='4xl' fontWeight='bold'>Description:</Text>
                     <Text fontSize='2xl'>{weatherDescriptions}</Text>
                 </Box>
                 <Box backgroundColor="rgba(255, 255, 255, 0.5)" padding='20px' borderRadius='10px'>
-                    <Text fontSize='2xl'>Sun-Rise:</Text>
+                    <Text fontSize='4xl' fontWeight='bold'>Sun-Rise:</Text>
                     <Text fontSize='2xl'>{sunriseTime}</Text>
                 </Box>
                 <Box backgroundColor="rgba(255, 255, 255, 0.5)" padding='20px' borderRadius='10px'>
-                    <Text fontSize='2xl'>Sun-Set:</Text>
+                    <Text fontSize='4xl' fontWeight='bold'>Sun-Set:</Text>
                     <Text fontSize='2xl'>{sunsetTime}</Text>
                 </Box>
-                <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.5)', padding: '20px', borderRadius: '10px' }}>
-                    <Image src={iconUrl} alt="Weather Icon" boxSize='150px' />
-                </div>
+                <Box backgroundColor="rgba(255, 255, 255, 0.5)" padding='20px' borderRadius='10px' >
+                    <Image src={iconUrl} alt="Weather Icon" boxSize="100px" fontWeight='bold'/>
+                </Box>
             </SimpleGrid>
         </div>
     );
