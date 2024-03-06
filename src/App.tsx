@@ -1,4 +1,4 @@
-import { Grid, GridItem, Show } from '@chakra-ui/react';
+import { Grid, GridItem } from '@chakra-ui/react';
 import { useState } from 'react';
 import Navbar from './components/Navbar';
 import SearchForm from './components/SearchForm';
